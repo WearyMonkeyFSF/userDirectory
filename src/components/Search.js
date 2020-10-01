@@ -8,7 +8,7 @@ export default class Search extends React.Component{
                     value={this.props.Search}
                     className="form-control mr-sm-2"
                     type="text"
-                    onChange={this.props.inputChange}
+                    onChange={this.props.handleInputChange}
                     placeholder="Search"
                     aria-label="Search"
                 />

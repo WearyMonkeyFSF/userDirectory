@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class Item extends React.Component{
+export default class ItemEmp extends React.Component{
     render(){
         return(
             <tr>
