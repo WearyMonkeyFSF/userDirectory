@@ -1,5 +1,12 @@
 import React from "react";
 
+const style = {
+    inputStyle: {
+        padding: "10px",
+        width: "50%",
+        marginBottom: "30px"
+    }       
+}
 export default class Search extends React.Component{
     render(){
         return(
@@ -11,6 +18,7 @@ export default class Search extends React.Component{
                     onChange={this.props.handleInputChange}
                     placeholder="Search"
                     aria-label="Search"
+                    style={style.inputStyle}
                 />
             </form>
         )
