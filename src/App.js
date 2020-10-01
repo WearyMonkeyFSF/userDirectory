@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Wrapper from "./components/Wrapper";
 import MyJumbotron from "./components/Jumbotron";
@@ -15,12 +14,8 @@ export default class App extends React.Component{
     search: ""
   }
 
-  handleInputChange = e => {
-    let search = e.target.value;
-
-    this.setState({
-      search: search
-    });
+  inputChange = e => {
+    this.setState({search: e.target.value})
   }
 
   sortName = e =>{
@@ -44,10 +39,11 @@ export default class App extends React.Component{
 
 
   render(){
+    
     return (
       <Wrapper>
         <MyJumbotron />
-        <Search search={this.state.seach} handleInputChange={this.handleInputChange}/>
+        <Search search={this.state.search} inputChange={this.inputChange}/>
         <Table sortName={this.sortName} employees={this.state.employees} search={this.state.search}/>
       </Wrapper>
 

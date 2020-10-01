@@ -12,10 +12,10 @@ export default class Search extends React.Component{
         return(
             <form className="form d-flex justify-content-center form-inline">
                 <input
-                    value={this.props.Search}
+                    value={this.props.search}
                     className="form-control mr-sm-2"
                     type="text"
-                    onChange={this.props.handleInputChange}
+                    onChange={this.props.inputChange}
                     placeholder="Search"
                     aria-label="Search"
                     style={style.inputStyle}

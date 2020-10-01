@@ -11,6 +11,9 @@ const style = {
 }
 export default class Table extends React.Component{
     render(){
+        const employees = this.props.employees.filter( e =>{
+            return e.name.toLowerCase().indexOf( this.props.search.toLowerCase() ) !== -1
+        })
         return(
             <table style={style.tableStyle} className='table table-hover table-striped'>
                 <thead>
@@ -22,7 +25,7 @@ export default class Table extends React.Component{
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.employees.map(e =>(
+                    {employees.map(e =>(
                         <ItemEmp 
                             key={e.id}
                             name={e.name}
